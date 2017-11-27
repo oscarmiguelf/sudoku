@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#60cdff"
+    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+    tools:context="com.oscarmiguelf.sudokumin.activity.MenuActivity">
+
+    <Button
+        android:id="@+id/btnEasy"
+        style="@style/ButtonMenu"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="Fácil"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btnMid"
+        style="@style/ButtonMenu"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Medio"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEasy"/>
+
+    <Button
+        android:id="@+id/btnHard"
+        style="@style/ButtonMenu"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Difícil"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMid"/>
+
+    <Button
+        android:id="@+id/btnVeryHard"
+        style="@style/ButtonMenu"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Experto"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHard"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#8cffb1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#8cffb1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="Existe una partida anterior\n¿Quieres empezar una nueva?"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/btnContinue"
+                style="@style/ButtonMenuFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btnNew"
+                android:layout_alignBottom="@+id/btnNew"
+                android:layout_alignParentLeft="true"
+                android:text="Continuar Partida"/>
+
+            <Button
+                android:id="@+id/btnNew"
+                style="@style/ButtonMenuFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="44dp"
+                android:text="Nueva Partida"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="61dp"
+        android:clickable="true"
+        android:tint="@color/white"
+        android:src="@drawable/ic_caret_forward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
